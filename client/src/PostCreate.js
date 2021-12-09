@@ -3,12 +3,12 @@ import axios from "axios";
 
 const PostCreate = () => {
   const [title, setTitle] = useState("");
-  
+
   const onSubmit = async (e) => {
-      e.preventDefault()
-      await axios.post('http://localhost:4000/posts', {title})
-      setTitle('')
-  }
+    e.preventDefault();
+    await axios.post("http://localhost:4000/posts", { title });
+    setTitle("");
+  };
   return (
     <div>
       <form onSubmit={onSubmit}>
